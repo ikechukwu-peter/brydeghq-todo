@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import { AddItemFormProps } from "../../interfaces";
+import React, { useState, useContext } from "react";
+import { TodoContext } from "@/contexts";
 
-export const AddItem = ({ onAdd }: AddItemFormProps) => {
+export const AddItem = () => {
   const [inputValue, setInputValue] = useState("");
+  const { addTodo } = useContext(TodoContext);
 
   // Handler for form submission
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    onAdd(inputValue); // Call the onAdd prop with the input value
+    addTodo(inputValue); // Add a new todo item to the global state
     setInputValue(""); // Reset the input value
   };
 
