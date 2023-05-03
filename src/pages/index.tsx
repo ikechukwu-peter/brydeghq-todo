@@ -17,7 +17,7 @@ export default function Home() {
       <CompletedTodos />
       <UncompletedTodos />
 
-      {/* The "Add Item" button that sticks to the bottom of the screen  */}
+      {/* The "Add Item" form that sticks to the bottom of the screen  */}
       <div className="mt-auto">
         <AddItem />
       </div>
