@@ -52,7 +52,7 @@ export const CompletedTodos = (): JSX.Element => {
                   type="checkbox"
                   checked={todo.completed}
                   onChange={(e) => handleCheckboxChange(e, todo.id)}
-                  className="rounded-xl appearance-none h-6 w-6 border border-blue-100 bg-blue-100 checked:bg-blue-600 checked:border-transparent focus:outline-none"
+                  className="rounded-xl appearance-none h-6 w-6 border border-blue-100 bg-blue-100 checked:bg-blue-600 checked:border-transparent focus:outline-none hover:bg-blue-200"
                   style={{
                     backgroundImage: `url(/check.svg)`,
                     backgroundRepeat: "no-repeat",

@@ -26,7 +26,7 @@ export const UncompletedTodos = () => {
                 type="checkbox"
                 checked={todo.completed}
                 onChange={(e) => handleCheckboxChange(e, todo.id)}
-                className="rounded-xl appearance-none h-6 w-6 border border-grey-100 bg-white checked:bg-blue-600 checked:border-transparent focus:outline-none"
+                className="rounded-xl appearance-none h-6 w-6 border border-grey-100 bg-white checked:bg-blue-600 checked:border-transparent focus:outline-none  hover:bg-grey-200"
               />
               <div className="flex flex-col items-start">
                 <span className="text-black font-bold text-medium">
