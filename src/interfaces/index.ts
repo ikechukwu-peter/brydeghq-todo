@@ -1,14 +1,9 @@
-// Defines the shape of props expected by the AddItem component
-export interface AddItemFormProps {
-  onAdd: (title: string) => void;
-}
-
 // Defines the shape of an individual todo item
 export interface Item {
   id: number;
   title: string;
   completed: boolean;
-  date: Date;
+  createdAt: Date;
 }
 
 // Defines the shape of the value provided by the TodoContext
