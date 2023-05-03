@@ -9,7 +9,7 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col p-4 md:p-10 lg:p-24 bg-white ${roboto.className}`}
     >
-      <h2 className="font-bold text-2xl md:text-3xl md:font-extrabold capitalize lg:text-4xl">
+      <h2 className="font-bold text-2xl md:text-3xl md:font-extrabold capitalize lg:text-4xl mb-2">
         To do List
       </h2>
 
@@ -17,8 +17,8 @@ export default function Home() {
       <CompletedTodos />
       <UncompletedTodos />
 
-      {/* The "Add Item" button that sticks to the bottom of the screen on small screens */}
-      <div className="fixed sm:block bottom-0 md:static w-full pr-4 md:pr-0 my-4">
+      {/* The "Add Item" button that sticks to the bottom of the screen  */}
+      <div className="mt-auto">
         <AddItem />
       </div>
     </main>

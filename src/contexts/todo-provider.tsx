@@ -10,7 +10,7 @@ export function TodoProvider({ children }: Props) {
   // Load todos from local storage on component mount
   useEffect(() => {
     const storedTodos = localStorage.getItem("todos");
-    if (storedTodos?.length) {
+    if (storedTodos !== null && storedTodos?.length > 0) {
       setTodos(JSON.parse(storedTodos));
     }
   }, []);

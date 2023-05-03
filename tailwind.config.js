@@ -24,16 +24,7 @@ module.exports = {
       "grey-300": "#eeeeee",
       black: "#121212",
     },
-    extend: {
-      textUnderlineOffset: {
-        3: "3px",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
