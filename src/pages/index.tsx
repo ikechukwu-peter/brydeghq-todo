@@ -1,13 +1,9 @@
-import Image from "next/image";
 import { Roboto } from "next/font/google";
-import { AddItem } from "@/components/todo";
+import { AddItem, CompletedTodos, UncompletedTodos } from "@/components/todo";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export default function Home() {
-  const onAdd = (title: string) => {
-    console.log(title, "ON Add");
-  };
   return (
     <main
       className={`flex min-h-screen flex-col  p-4 md:p-10 lg:p-24 ${roboto.className}`}
@@ -20,7 +16,9 @@ export default function Home() {
       </h2>
 
       {/* TODO */}
-      <AddItem onAdd={onAdd} />
+      <CompletedTodos />
+      <UncompletedTodos />
+      <AddItem />
     </main>
   );
 }

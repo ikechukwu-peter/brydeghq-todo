@@ -4,7 +4,11 @@ import { IoMdArrowDropdown, IoMdArrowDropright } from "react-icons/io";
 import dayjs from "dayjs";
 import { capitalizeFirstLetter } from "@/utils";
 
-export const CompletedTodos = () => {
+/**
+ * Component to display a list of completed todos
+ * @returns JSX.Element
+ */
+export const CompletedTodos = (): JSX.Element => {
   const { todos, completeTodo } = useContext(TodoContext);
 
   // Filter the todos array to only include completed todos
@@ -26,6 +30,7 @@ export const CompletedTodos = () => {
 
   return (
     <div>
+      <hr className="my-4 border-grey-200 border-t-1 font-extrabold" />
       <div className="text-black flex items-center gap-2 my-3">
         <button onClick={handleToggleButtonClick}>
           {showCompletedTodos ? (
@@ -38,7 +43,6 @@ export const CompletedTodos = () => {
           {completedTodos.length} Done{" "}
         </p>
       </div>
-
       {showCompletedTodos && (
         <ul className="flex flex-col gap-3">
           {completedTodos.map((todo) => (
@@ -58,7 +62,7 @@ export const CompletedTodos = () => {
                 />
 
                 <div className="flex flex-col items-start">
-                  <span className="text-grey-200 line-through">
+                  <span className="text-grey-200 line-through font-bold text-medium">
                     {capitalizeFirstLetter(todo.title)}
                   </span>
 
