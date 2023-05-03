@@ -1,17 +1,24 @@
 import React, { useState, useContext } from "react";
 import { TodoContext } from "@/contexts";
+import cogoToast from "cogo-toast";
 
 export const AddItem = () => {
   const [inputValue, setInputValue] = useState("");
-  const { addTodo } = useContext(TodoContext);
+  const { addTodo, todos } = useContext(TodoContext);
 
   // Handler for form submission
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     if (!inputValue) {
-      return;
+      return cogoToast.error("Field is empty");
     }
-    addTodo(inputValue); // Add a new todo item to the global state
+    const existingTodo = todos.find(
+      (todo) => todo.title.toLowerCase() === inputValue.trim().toLowerCase()
+    );
+    if (existingTodo) {
+      return cogoToast.error("A todo item with the same title already exists.");
+    }
+    addTodo(inputValue.trim()); // Add a new todo item to the global state
     setInputValue(""); // Reset the input value
   };
 
