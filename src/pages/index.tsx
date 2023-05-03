@@ -7,7 +7,7 @@ export default function Home() {
   return (
     // The main container of the to-do list page
     <main
-      className={`flex min-h-screen flex-col p-4 md:p-10 lg:p-24 ${roboto.className}`}
+      className={`flex min-h-screen flex-col p-4 md:p-10 lg:p-24 bg-white ${roboto.className}`}
     >
       <h2 className="font-bold text-2xl md:text-3xl md:font-extrabold capitalize lg:text-4xl">
         To do List
